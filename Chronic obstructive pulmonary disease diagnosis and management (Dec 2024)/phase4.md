@@ -110,10 +110,10 @@ flowchart TD
     C --> C4[Wheezing May be exertional or nocturnal]
     C --> C5[Frequent lower respiratory tract infections]
     
-    B -->|Yes| D{Perform spirometry (Except active respiratory infectious disease like TB, heart disease) Post-bronchodilator FEV1/FVC <0.7?}
+    B -->|Yes| D{"Perform spirometry (Except active respiratory infectious disease like TB, heart disease) Post-bronchodilator FEV1/FVC <0.7?"}
     C -->|Yes| D
     
-    D -->|Yes| E[Recommendation 2: Diagnose COPD if post-bronchodilator FEV1/FVC <0.7.]
+    D -->|Yes| E{"Recommendation 2: Diagnose COPD if post-bronchodilator FEV1/FVC <0.7."}
     D -->|No| F[Explore differential diagnoses]
     
     F --> F1[Asthma]
@@ -176,15 +176,15 @@ This diagram outlines the diagnostic pathway for COPD, which begins with the ide
 ### Mermaid
 ```mermaid
 flowchart TD
-    RiskFactors[Risk factors\n(e.g., Tobacco smoking and exposure to other lung irritants, 40 years and older)]
-    Symptoms[Symptoms\n(e.g., Chronic cough, chronic sputum production, chronic dyspnoea, wheezing, frequent upper and lower respiratory tract infections)]
+    RiskFactors["Risk factors<br/>(e.g., Tobacco smoking and exposure to other lung irritants, 40 years and older)"]
+    Symptoms["Symptoms<br/>(e.g., Chronic cough, chronic sputum production, chronic dyspnoea, wheezing, frequent upper and lower respiratory tract infections)"]
     
     RiskFactors --> AirwayObstruction
     Symptoms --> AirwayObstruction
     
-    AirwayObstruction[Airway obstruction\nPost-bronchodilator spirometry\nFEV1/FVC <0.70\n(Exclude active respiratory infectious disease, heart disease)\nFEV1/FVC: Ratio between FEV1 and FVC]
+    AirwayObstruction["Airway obstruction<br/>Post-bronchodilator spirometry<br/>FEV1/FVC <0.70<br/>(Exclude active respiratory infectious disease, heart disease)<br/>FEV1/FVC: Ratio between FEV1 and FVC"]
     
-    AirwayObstruction --> Diagnosis[Diagnosis of COPD]
+    AirwayObstruction --> Diagnosis["Diagnosis of COPD"]
 ```
 
 ### IEET
@@ -302,8 +302,8 @@ This guideline outlines individualised maintenance pharmacotherapy for COPD pati
 | Category | Content |
 |---|---|
 | **Abbreviations** | **CAT**: COPD Assessment Test (CATM)<br>**ICS**: inhaled corticosteroid<br>**LABA**: long-acting beta2-agonist<br>**LAMA**: long-acting muscarinic antagonist<br>**SABA**: short-acting beta2-agonist<br>**SAMA**: short-acting muscarinic antagonist |
-| **Footnote *** | Consider adjusting down the dose or withdrawing ICS if pneumonia or other associated side effects of ICS occur. But caution in patients with blood eosinophils ≥300 cells/μL as this can be associated with the development of exacerbations. |
-| **Footnote †** | LABA-only inhalers are not available in Singapore at the time of ACG publication; see Recommendation 5 for more details. |
+| **Footnote** * | Consider adjusting down the dose or withdrawing ICS if pneumonia or other associated side effects of ICS occur. But caution in patients with blood eosinophils ≥300 cells/μL as this can be associated with the development of exacerbations. |
+| **Footnote** † | LABA-only inhalers are not available in Singapore at the time of ACG publication; see Recommendation 5 for more details. |
 | **Additional Therapy** | SABA or SAMA can be used in addition to maintenance therapy to relieve intermittent dyspnea. |
 
 ### Mermaid
@@ -312,7 +312,7 @@ flowchart TD
     A[Number of Exacerbations last 12 months] --> B[0–1 exacerbations treated as outpatient]
     A --> C[≥2 exacerbations treated as outpatient OR ≥1 leading to hospitalisations]
     
-    B --> D[Infrequent or less intense symptoms for example CAT <10]
+    B --> D["Infrequent or less intense symptoms for example CAT <10"]
     B --> E[Frequent / intense symptoms for example CAT ≥10]
     
     D --> F[LAMA]
