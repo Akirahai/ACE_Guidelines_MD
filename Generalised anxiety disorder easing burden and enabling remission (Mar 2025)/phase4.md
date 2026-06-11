@@ -218,20 +218,16 @@ This guideline outlines the management of Generalized Anxiety Disorder (GAD), wi
 **Mermaid**
 ```mermaid
 flowchart TD
-    Start[Select the treatment approach by assessing GAD severity and other factors, taking into account the needs, preferences, and readiness of the patient (Recommendation 1)] --> Severity{Assess GAD Severity}
-    Start --> GeneralCare[Alongside general care and support: Psychoeducation and self-help, Social services and community resources, Lifestyle practices]
+    Start["Select the treatment approach by assessing GAD severity and other factors, taking into account the needs, preferences, and readiness of the patient (Recommendation 1)"] --> Severity{"Assess GAD Severity"}
+    Start --> GeneralCare["Alongside general care and support: Psychoeducation and self-help, Social services and community resources, Lifestyle practices"]
     
-    Severity -->|Mild| Mild[For patients with mild GAD (Recommendation 2)]
-    Severity -->|Moderate| Moderate[For patients with moderate GAD (Recommendation 3)]
-    Severity -->|Severe| Severe[For patients with severe GAD (Recommendation 4)]
+    Mild["For patients with mild GAD (Recommendation 2)"] -->|"a) Consider CBT-based psychological treatments as first-line"| MildCBT["CBT-based psychological treatments"]
+    Mild -->|"b) Consider medication if psychological treatments are not feasible or acceptable"| MildMed["Medication"]
     
-    Mild -->|a) Consider CBT-based psychological treatments as first-line| MildCBT[CBT-based psychological treatments]
-    Mild -->|b) Consider medication if psychological treatments are not feasible or acceptable| MildMed[Medication]
+    Moderate["For patients with moderate GAD (Recommendation 3)"] -->|"a) Offer a CBT-based psychological treatment or an SSRI/SNRI medication"| ModCBTOrMed["CBT-based psychological treatment or SSRI/SNRI medication"]
+    Moderate -->|"b) Consider a combination of both modalities if supported by clinical need"| ModCombo["Combination of both modalities"]
     
-    Moderate -->|a) Offer a CBT-based psychological treatment or an SSRI/SNRI medication| ModCBTOrMed[CBT-based psychological treatment or SSRI/SNRI medication]
-    Moderate -->|b) Consider a combination of both modalities if supported by clinical need| ModCombo[Combination of both modalities]
-    
-    Severe -->|Offer a combination of CBT-based psychological treatment and SSRI/SNRI medication as first-line| SevereCombo[Combination of CBT-based psychological treatment and SSRI/SNRI medication]
+    Severe["For patients with severe GAD (Recommendation 4)"] -->|"Offer a combination of CBT-based psychological treatment and SSRI/SNRI medication as first-line"| SevereCombo["Combination of CBT-based psychological treatment and SSRI/SNRI medication"]
     
     MildCBT --> FollowUp
     MildMed --> FollowUp
@@ -240,16 +236,16 @@ flowchart TD
     SevereCombo --> FollowUp
     GeneralCare --> FollowUp
     
-    FollowUp[After an adequate trial of treatment (e.g. 4–8 weeks of an SSRI or SNRI medication, or at the midpoint of the planned psychological treatment course)] --> Outcome{Response?}
+    FollowUp["After an adequate trial of treatment (e.g. 4–8 weeks of an SSRI or SNRI medication, or at the midpoint of the planned psychological treatment course)"] --> Outcome{"Response?"}
     
-    Outcome -->|Responding| Continue[Continue treatment and monitor progress towards remission]
-    Outcome -->|Not adequate response| Assess[If treatment does not achieve adequate response in patients with GAD, assess possible reasons before considering modifying treatment or seeking specialist advice (Recommendation 5)]
+    Outcome -->|"Responding"| Continue["Continue treatment and monitor progress towards remission"]
+    Outcome -->|"Not adequate response"| Assess["If treatment does not achieve adequate response in patients with GAD, assess possible reasons before considering modifying treatment or seeking specialist advice (Recommendation 5)"]
     
-    Continue --> Remission[For patients on antidepressants who reached remission (Recommendation 6)]
-    Remission --> Continue6Months[Continue treatment with an SSRI or SNRI for at least six months after achieving remission]
-    Continue6Months --> Discontinue[Once the course of treatment is completed, in discussion with the patient, decide if medication can be discontinued]
+    Continue --> Remission["For patients on antidepressants who reached remission (Recommendation 6)"]
+    Remission --> Continue6Months["Continue treatment with an SSRI or SNRI for at least six months after achieving remission"]
+    Continue6Months --> Discontinue["Once the course of treatment is completed, in discussion with the patient, decide if medication can be discontinued"]
     
-    Benzodiazepines[Do not routinely prescribe benzodiazepines as first-line treatment for GAD (Recommendation 7)]
+    Benzodiazepines["Do not routinely prescribe benzodiazepines as first-line treatment for GAD (Recommendation 7)"]
     
     style Benzodiazepines fill:#f9f,stroke:#333,stroke-width:4px
 ```

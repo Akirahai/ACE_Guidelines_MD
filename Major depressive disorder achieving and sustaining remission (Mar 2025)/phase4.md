@@ -65,27 +65,27 @@ This guideline outlines the management of Major Depressive Disorder (MDD) in adu
 **Mermaid**
 ```mermaid
 flowchart TD
-    A[Start: Evaluate MDD severity based on symptom profile, functional impairment, and risk of harm (Recommendation 1). Personalise treatment approach (Recommendation 2).] --> B{Severity?}
-    B -->|Mild to Moderate| C[Offer psychological treatment over antidepressants where feasible and acceptable (Recommendation 3).]
-    B -->|Moderately Severe or Severe| D[Offer combination of second-generation antidepressant with psychotherapy, or psychotherapy alone. When psychotherapy not feasible/acceptable, consider second-generation antidepressant (Recommendations 4a, 4b).]
+    A["Start: Evaluate MDD severity based on symptom profile, functional impairment, and risk of harm (Recommendation 1). Personalise treatment approach (Recommendation 2)."] --> B{Severity?}
+    B -->|"Mild to Moderate"| C["Offer psychological treatment over antidepressants where feasible and acceptable (Recommendation 3)."]
+    B -->|"Moderately Severe or Severe"| D["Offer combination of second-generation antidepressant with psychotherapy, or psychotherapy alone. When psychotherapy not feasible/acceptable, consider second-generation antidepressant (Recommendations 4a, 4b)."]
     C --> E[Assess treatment response after adequate treatment trial: about 4 to 12 weeks of antidepressant at appropriate therapeutic dose and/or about 8 to 9 sessions of psychotherapy.]
     D --> E
     E --> F{Treatment response?}
-    F -->|Suboptimal <50% reduction| G[Assess possible reasons for suboptimal treatment response (Recommendation 5). Where possible, address reasons for treatment ineffectiveness.]
+    F -->|"Suboptimal <50% reduction"| G["Assess possible reasons for suboptimal treatment response (Recommendation 5). Where possible, address reasons for treatment ineffectiveness."]
     G --> H{Response remains suboptimal?}
     H -->|Yes| I[A change in management strategy may be required. See Figure 4 for recommended strategies.]
     I --> J{Response remains suboptimal?}
     J -->|Yes| K[Patient may benefit from referral to specialist services.]
     F -->|Elicited| L[Continue treatment till remission is reached.]
-    L --> M[Monitoring for remission: operationalised using threshold scores on depression symptom scales, e.g., score < 5 on PHQ-9.]
-    M --> N[Full remission may not always be viable for all patients (e.g., persistent depression, limited life expectancy). Focus on reducing symptoms or increasing quality of life.]
+    L --> M{"Monitoring for remission: operationalised using threshold scores on depression symptom scales, e.g., score < 5 on PHQ-9."}
+    M --> N["Full remission may not always be viable for all patients (e.g., persistent depression, limited life expectancy). Focus on reducing symptoms or increasing quality of life."]
     N --> O[Maintenance Phase: Sustain remission and reduce risk of relapse.]
     O --> P[Continue treatment after remission to reduce relapse risk. Effective treatments: Continuation of antidepressant treatment, Provision of psychological treatment, Combination of both.]
-    P --> Q[For patients on antidepressants: Continue at optimal dose for at least 6 months after remission (Recommendation 6).]
+    P --> Q["For patients on antidepressants: Continue at optimal dose for at least 6 months after remission (Recommendation 6)."]
     Q --> R[After 6 months of maintenance antidepressant treatment: Initiate conversation for shared decision-making regarding further continuation. See Figure 5.]
     R --> S[Continue antidepressant treatment.]
     R --> T[Discontinue antidepressant treatment.]
-    T --> U[Minimise discontinuation symptoms by gradually reducing (tapering) the antidepressant dose.]
+    T --> U["Minimise discontinuation symptoms by gradually reducing (tapering) the antidepressant dose."]
     S --> V[Monitor and reassess patient as needed.]
     U --> V
 ```

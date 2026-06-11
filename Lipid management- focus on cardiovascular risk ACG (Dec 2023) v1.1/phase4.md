@@ -102,46 +102,46 @@ flowchart TD
     Start{Identify highest risk-stratifying factor} --> ASCVD{ASCVD<br/>history of ACS MI, unstable angina, stable IHD, ischaemic stroke, TIA, PAD, AAA, post-CABG, post-PCI}
     Start --> FH{FH}
     Start --> DM{DM}
-    Start --> CKD{CKD<br/>eGFR <60 mL/min/1.73m² and/or ACR ≥3 mg/mmol}
-    Start --> HighLDL{LDL-C >4.9 mmol/L >190 mg/dL and not FH}
+    Start --> CKD{"CKD<br/>eGFR <60 mL/min/1.73m² and/or ACR ≥3 mg/mmol"}
+    Start --> HighLDL{"LDL-C >4.9 mmol/L >190 mg/dL and not FH"}
     Start --> RiskCalc{Calculate 10-year cardiovascular risk Singapore-modified FRS}
 
     %% Secondary Prevention
     ASCVD --> ASCVD_Manage[Treat with maximally-tolerated statin +/- ezetimibe<br/>Consider PCSK9 monoclonal antibody or inclisiran if LDL-C ≥1.8 mmol/L despite maximally-tolerated statin and ezetimibe, especially for post-ACS, recurrent ASCVD, polyvascular disease, or FH]
-    ASCVD_Manage --> ASCVD_Target[Aim for LDL-C <1.4 mmol/L <55 mg/dL in patients with history of ACS<br/>Aim for LDL-C <1.8 mmol/L <70 mg/dL in other patients, consider lower based on clinical need and tolerability]
+    ASCVD_Manage --> ASCVD_Target{"Aim for LDL-C <1.4 mmol/L <55 mg/dL in patients with history of ACS<br/>Aim for LDL-C <1.8 mmol/L <70 mg/dL in other patients, consider lower based on clinical need and tolerability"}
 
     FH --> FH_Manage[Treat with maximally-tolerated statin +/- ezetimibe<br/>Consider PCSK9 monoclonal antibody or inclisiran if LDL-C ≥2.6 mmol/L despite maximally-tolerated statin and ezetimibe]
-    FH_Manage --> FH_Target[Consider LDL-C <1.8 mmol/L <70 mg/dL: if age >40 years old, or additional CV risk factor s e.g., DM, hypertension, smoking, subclinical atherosclerosis if investigated<br/>Consider LDL-C <2.6 mmol/L <100 mg/dL: if age ≤40 years old and no additional CV risk factors]
+    FH_Manage --> FH_Target{"Consider LDL-C <1.8 mmol/L <70 mg/dL: if age >40 years old, or additional CV risk factor s e.g., DM, hypertension, smoking, subclinical atherosclerosis if investigated<br/>Consider LDL-C <2.6 mmol/L <100 mg/dL: if age ≤40 years old and no additional CV risk factors"}
 
     %% Primary Prevention
     DM --> DM_Risk{Additional DM-specific risk factors<br/>CKD, multiple microvascular complications, DM duration ≥10 years, or glycaemic level persistently above target despite optimal treatment}
     DM_Risk -->|Yes| DM_HighRisk[Consider maximally-tolerated statin +/- ezetimibe]
     DM_Risk -->|No| DM_LowRisk[Treat with at least a moderate-intensity statin]
-    DM_HighRisk --> DM_Target_High[Consider LDL-C <1.8 mmol/L <70 mg/dL]
-    DM_LowRisk --> DM_Target_Low[Aim for LDL-C <2.6 mmol/L <100 mg/dL, consider lower based on clinical need and tolerability]
+    DM_HighRisk --> DM_Target_High{"Consider LDL-C <1.8 mmol/L <70 mg/dL"}
+    DM_LowRisk --> DM_Target_Low{"Aim for LDL-C <2.6 mmol/L <100 mg/dL, consider lower based on clinical need and tolerability"}
 
     CKD --> CKD_Manage[Treat with moderate-intensity statin +/- ezetimibe in non-dialysis dependent patients. Caution with dose titration.]
-    CKD_Manage --> CKD_Target[Aim for LDL-C <2.6 mmol/L <100 mg/dL, consider lower based on clinical need and tolerability]
+    CKD_Manage --> CKD_Target{"Aim for LDL-C <2.6 mmol/L <100 mg/dL, consider lower based on clinical need and tolerability"}
 
     HighLDL --> HighLDL_Manage[Consider at least a moderate-intensity statin]
     HighLDL_Manage --> HighLDL_Target[Consider calculating 10-year CV risk e.g. SG-FRS to determine LDL-C target]
 
-    RiskCalc --> RiskHigh{High risk SG-FRS >20%}
+    RiskCalc --> RiskHigh{"High risk SG-FRS >20%"}
     RiskCalc --> RiskIntermediate{Intermediate risk SG-FRS 10–20%}
-    RiskCalc --> RiskBorderline{Borderline risk SG-FRS 5–<10%}
-    RiskCalc --> RiskLow{Low risk SG-FRS <5%}
+    RiskCalc --> RiskBorderline{"Borderline risk SG-FRS 5–<10%"}
+    RiskCalc --> RiskLow{"Low risk SG-FRS <5%"}
 
     RiskHigh --> RiskHigh_Manage[Consider maximally-tolerated statin +/- ezetimibe]
-    RiskHigh_Manage --> RiskHigh_Target[Consider LDL-C <1.8 mmol/L <70 mg/dL]
+    RiskHigh_Manage --> RiskHigh_Target{"Consider LDL-C <1.8 mmol/L <70 mg/dL"}
 
     RiskIntermediate --> RiskInt_Manage[Consider moderate-intensity statin, especially if risk enhancers present Box A]
-    RiskInt_Manage --> RiskInt_Target[Consider LDL-C <2.6 mmol/L <100 mg/dL]
+    RiskInt_Manage --> RiskInt_Target{"Consider LDL-C <2.6 mmol/L <100 mg/dL"}
 
     RiskBorderline --> RiskBorder_Manage[Consider risk-benefit discussion for a statin if risk enhancers present Box A]
-    RiskBorder_Manage --> RiskBorder_Target[Consider LDL-C <3.4 mmol/L <130 mg/dL]
+    RiskBorder_Manage --> RiskBorder_Target{"Consider LDL-C <3.4 mmol/L <130 mg/dL"}
 
-    RiskLow --> RiskLow_Manage[Focus on lifestyle intervention. Consider risk-benefit discussion for a statin if LDL-C persistently >4.1 mmol/L >160 mg/dL]
-    RiskLow_Manage --> RiskLow_Target[Consider ideal LDL-C <3.4 mmol/L <130 mg/dL]
+    RiskLow --> RiskLow_Manage{"Focus on lifestyle intervention. Consider risk-benefit discussion for a statin if LDL-C persistently >4.1 mmol/L >160 mg/dL"}
+    RiskLow_Manage --> RiskLow_Target{"Consider ideal LDL-C <3.4 mmol/L <130 mg/dL"}
 ```
 
 #### IEET
@@ -253,9 +253,9 @@ Figure 4 outlines additional considerations for prescribing PCSK9 monoclonal ant
 #### Mermaid
 ```mermaid
 flowchart LR
-    A[LDL-C >4.9 mmol/L (>190 mg/dL) and not FH] --> B[Consider at least a moderate-intensity statin]
+    A["LDL-C >4.9 mmol/L (>190 mg/dL) and not FH"] --> B[Consider at least a moderate-intensity statin]
     
-    C[LDL-C target] --> D[Consider calculating 10-year CV risk (e.g. SG-FRS) to determine LDL-C target]
+    C[LDL-C target] --> D["Consider calculating 10-year CV risk (e.g. SG-FRS) to determine LDL-C target"]
     
     style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style B fill:#e1f5fe,stroke:#01579b,stroke-width:2px
@@ -349,8 +349,8 @@ Consider LDL-C <2.6 mmol/L (<100 mg/dL)
 #### Mermaid
 ```mermaid
 flowchart TD
-    A[Intermediate risk (SG-FRS 10–20%)] --> B[Consider moderate-intensity statin, especially if risk enhancers present]
-    B --> C[LDL-C target: Consider LDL-C <2.6 mmol/L (<100 mg/dL))]
+    A["Intermediate risk (SG-FRS 10–20%)"] --> B[Consider moderate-intensity statin, especially if risk enhancers present]
+    B --> C{"LDL-C target: Consider LDL-C <2.6 mmol/L (<100 mg/dL))"}
 ```
 
 #### IEET
@@ -380,7 +380,7 @@ While all patients should be reassessed and provided tailored advice on optimisi
 
 ```mermaid
 flowchart LR
-    A["Low risk\n(SG-FRS<5%)"] --> B["Focus on lifestyle intervention. Consider risk-benefit discussion for a statin if LDL-C persistently >4.1 mmol/L (>160 mg/dL)"]
+    A["Low risk<br/>(SG-FRS<5%)"] --> B["Focus on lifestyle intervention. Consider risk-benefit discussion for a statin if LDL-C persistently >4.1 mmol/L (>160 mg/dL)"]
     B --> C["Consider ideal LDL-C <3.4 mmol/L (<130 mg/dL)"]
     D["LDL-C target"] --> E["Next step"]
 ```
